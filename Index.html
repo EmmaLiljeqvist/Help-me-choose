@@ -14,7 +14,7 @@
       <button class="addOption">Add</button>
     </div>
     <div class="resultSection"></div>
-    <button style="background-color: green">Go!</button>
+    <button class="submit">Go!</button>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script>
@@ -24,7 +24,6 @@
       var add_option = function() {
         $ ('.inputs').append('<input></input>')
       }
-
       $('.addOption').click(add_option)
 
       var options = []
