@@ -2,11 +2,11 @@
 <html lang=en>
   <head>
       <meta charset=utf-8>
-      <title>Help me choose</title>
+      <title>Help me choose..</title>
       <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body style="background-color: pink">
-    <h1>Help me choose between..</h1>
+    <h1>The Winner is..</h1>
     <div class="inputSection">
       <div class="inputs">
         <input placeholder="Something"></input>
@@ -26,6 +26,19 @@
       }
 
       $('.addOption').click(add_option)
+
+      var options = []
+      var submit = function() {
+        $('.inputSection').hide()
+        $('.resultSection').css('display', 'flex')
+        $('input').each(function() {
+          options.push($(this).val())
+        })
+        var winner = options[Math.floor(Math.random() * options.length)]
+        console.log(winner)
+        $('.resultSection').text(winner)
+      }
+      $('.submit').click(submit)
     })
   </script>
   </body>
